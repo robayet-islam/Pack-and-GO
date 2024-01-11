@@ -1,0 +1,31 @@
+@media (min-width: 0px) and (max-width: 575.98px) { 
+    .main_menu {
+        padding: 6px 0;
+    }
+    .w-100 {
+        width: 80% !important;
+    }
+    .main_menu .nav_icon{
+        color: #007F5F;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .navbar-toggler {
+        border: 2px solid #007F5F;
+    }
+.main_menu ul{
+    gap: 20px;
+    background: #007F5F;
+    border-radius: 15px;
+    padding: 20px 0; 
+}
+.main_menu ul li a{
+    color: #fff !important;
+}
+.main_menu  .book_btn{
+    text-align: center;
+    margin-top: 20px;
+}
+
+}

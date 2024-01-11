@@ -1,0 +1,512 @@
+/* ========= Font Link Part Start ======== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* ------------ Font Link Part End ----------- */
+/* ========= Common CSS Part Start ======== */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+/* ------------ Common CSS Part End ----------- */
+/* ========= Variable Part Start ======== */
+:root{
+    --brand-color : #007F5F;
+    --primary-color: #292929;
+    --secondary-color: #616161;
+    --poppins : 'Poppins', sans-serif;
+    --nunito :  'Nunito Sans', sans-serif;
+}
+/* ------------ Variable Part End ----------- */
+/* ========= Menubar Part Start ======== */
+.main_menu{
+    padding: 41px 0;
+}
+.menu_fixed{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+    animation: namo 1s linear;
+}
+@keyframes namo {
+    from{
+        top: -20%;
+    }to{
+        top: 0;
+    }
+}
+
+.main_menu ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color:  var(--secondary-color) !important;
+    padding: 0 15px !important;
+    position: relative;
+    transition: 0.2s all linear;
+}
+.main_menu ul li a::after{
+    content: ' ';
+    width: 0%;
+    height: 2px;
+    background: var(--brand-color);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: 0.2s all linear;
+}
+.main_menu ul li a:hover::after{
+    width: 100%;
+}
+.book_btn a{
+    width: 150px;
+    height: 56px;
+    background: var(--brand-color);
+    border-radius: 17px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: #fff;
+    text-align: center;
+    line-height: 56px;
+    border: 2px solid transparent;
+    transition: 0.2s all linear;
+}
+.book_btn a:hover{
+    color: var(--brand-color);
+    background: transparent;
+    border: 2px solid var(--brand-color);
+}
+/* ------------ Menubar  Part End ----------- */
+/* ========= Banner Part Start ======== */
+#banner{
+    width: 100%;
+    padding: 147px 0 122px 0;
+    background: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+#banner::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.40) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.banner_text{
+    width: 570px;
+}
+.banner_text h1{
+    font-size:65px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: #fff;
+}
+.banner_text p{
+    font-size:16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color: #fff;
+    line-height: 30px;
+    padding: 30px 0 40px 0;
+}
+.banner_btn{
+    width: 180px;
+    height: 56px;
+    background: var(--brand-color);
+    border-radius: 17px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: #fff;
+    text-align: center;
+    line-height: 56px;
+    border: 2px solid transparent;
+    transition: 0.2s all linear;
+}
+.banner_btn:hover{
+    border: 2px solid #fff;
+    background: transparent;
+}
+.src_bar{
+    width: 825px;
+    padding: 24px 25px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+.src_option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.src_bar .src_icon{
+    display: flex;
+    align-items: center;
+}
+.src_icon h4{
+    font-size: 20px;
+    font-weight: 700;
+    font-family:var(--nunito);
+    color: var(--primary-color);
+    margin-left: 11px;
+    margin-right: 20px;
+}
+.src_item input{
+    border: none;
+    margin-top: 8px;
+    padding-left: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--nunito);
+    line-height: 26px;
+    color: #6a6a6a;
+}
+.src_item input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--nunito);
+    line-height: 26px;
+    color: #6a6a6a;
+}
+.src_btn a{
+    width: 82px;
+    height: 82px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: #007F5F;
+    font-size: 22px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all linear;
+}
+.src_btn a:hover{
+    color: #616161;
+    background: #fff;
+    box-shadow: 5px 16px 28px 0px rgba(0, 0, 0, 0.176);
+}
+/* ------------ Banner Part End ----------- */
+/* =========  Benefit Part Start ======== */
+#benefit{
+    width: 100%;
+    padding: 150px 0 ;
+    background: #fff;
+}
+.benefit_heading{
+    width: 690px;
+    margin: 0 auto;
+}
+.benefit_heading h3{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    font-family: var(--poppins);
+    color: #1e1e1e;
+    text-align: center;
+}
+.benefit_heading p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+.benefit_row{
+    margin-top: 150px;
+}
+.benefit_item{
+    padding: 79px 78px 47px 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    transition: 0.2s all linear;
+    cursor: pointer;
+}
+.benefit_item:hover{
+    box-shadow: 1px 1px 50px 3px  #e4e4e4;
+}
+.benefit_item:hover .benefit_text h3{
+    font-weight: 600;
+}
+.benefit_icon{
+    width: 84px;
+    height: 78px;
+    background: rgba(0, 127, 95, 0.10);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.benefit_text h3{
+    font-size: 25px !important;
+    font-weight: 500;
+    font-family: var(--poppins);
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #1e1e1e;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: 0.2s all linear;
+}
+.benefit_text p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    line-height: 30px;
+    color: var(--secondary-color);
+}
+/* ------------  Benefit Part End ----------- */
+/* ========= Popular Part Start ======== */
+#popular{
+    width: 100%;
+    background: #fff;
+    padding-bottom: 100px;
+}
+.popular_heading h3{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    font-family: var(--poppins);
+    color: #1e1e1e;
+    text-align: center;
+}
+.popular_heading p{
+    width: 690px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    line-height: 30px;
+    text-align: center;
+    margin: 20px auto 50px auto;
+}
+.popular_slider .popular_slider_item{
+    width: 370px;
+    padding: 21px 20px 50px 21px ;
+    border-radius: 17px;
+}
+.popular_slider_img{
+    border-radius: 17px;
+}
+.popular_slider_item .popular_review ul {
+    display: flex;
+    gap: 6px;
+    margin-top: 37px;
+    margin-bottom: 17px;
+}
+.popular_slider_item .popular_review ul li{
+    font-size: 16px;
+    color: #E0E0E0;
+}
+.popular_slider_item .popular_review ul li p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+}
+.popular_slider_item .popular_review ul .orange_colored{
+    color: #FF8B00;
+}
+.popular_slider_item .popular_text h3{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    line-height: 24px;
+    color:#1E1E1E ;
+}
+.popular_slider_item .popular_text p{
+    width: 325px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    line-height: 30px;
+    color:var(--secondary-color) ;
+    margin: 20px 0;
+}
+.popular_slider_item .popular_text h4{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    line-height: 24px;
+    color:#1E1E1E ;
+}
+.popular_slider_item .popular_text h4 span{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: var(--secondary-color) ;
+}
+.popular_button a{
+    width: 150px;
+    height: 48px;
+    border-radius: 17px;
+    background: #fff;
+    border: 1px solid #007F5F;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color:#007F5F ;
+    line-height: 48px;
+    margin-top: 30px;
+}
+.slick-center{
+    margin-bottom: 50px;
+    box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.176);
+    border-radius: 17px;
+}
+.slick-center .popular_button a{
+    background-color: #007F5F;
+    color: #fff;
+}
+/* ------------ Popular Part End ----------- */
+/* ========= Travel Part Start ======== */
+#travel{
+    width: 100%;
+    padding: 148px 0 152px 0;
+    background: rgba(30, 30, 30, 0.05);
+}
+.travel_text{
+    margin-top: 68px;
+}
+.common_heading h3{
+    width: 418px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: #1E1E1E;
+    letter-spacing: 0.2px;
+}
+.common_heading p{
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color: var(--secondary-color);
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.check_icon{
+    color: #007F5F;
+}
+.travel_text .travel_list ul li{
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color: var(--secondary-color);
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.travel_text .travel_list ul li span{
+    display: block;
+    margin-left: 41px;
+}
+.travel_text .travel_button a {
+    width: 189px ;
+    height: 56px;
+    background: #007F5F;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: #fff;
+    margin-top: 40px;
+    transition: 0.2s all linear;
+}
+.travel_text .travel_button a:hover{
+    background-color: #fff;
+    color: #616161;
+    box-shadow: 5px 16px 28px 0px rgba(0, 0, 0, 0.176);
+    transform: scale(1.1);
+}
+.travel_counter{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.counter_item{
+    width: 270px;
+    padding: 62px 30px;
+    background: #fff;
+    border-radius: 17px;
+    transition: 0.2s all linear;
+}
+.counter_item .counter_icon {
+    width: 74px;
+    height: 78px;
+    background: #E6F3EF;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #007F5F;
+}
+.counter_item .counter_text h2, 
+.kplus{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: #1E1E1E;
+    letter-spacing: 0.2px;
+    margin-top: 20px;
+    transition: 0.2s all linear;
+}
+.counter_item .counter_text p{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: var(--secondary-color);
+    letter-spacing: 0.2px;
+    transition: 0.2s all linear;
+}
+.counter_item:hover{
+    background: #007F5F;
+}
+.counter_item:hover .counter_icon{
+    background: #fff;
+}
+.counter_item:hover .counter_text h2{
+    color: #fff;
+}
+.counter_item:hover .kplus{
+    color: #fff;
+}
+.counter_item:hover .counter_text p{
+    color: #fff;
+}
+/* ------------ Travel Part End ----------- */
+/* =========  Part Start ======== */
+
+/* ------------  Part End ----------- */
+/* =========  Part Start ======== */
+
+/* ------------  Part End ----------- */
